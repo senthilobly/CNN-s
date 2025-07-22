@@ -87,3 +87,14 @@ CNNs preserve spatial structure by using:
 3. Feature Map: the result after convolution, showing detected features.
 4. Stride: Step size of filter movement (1 vs. 2 for downsampling)
 
+**CNN Operations:**
+Convolution Process:
+1. Take filter → slide over image → multiply and sum → produce output matrix.
+2. Stride: how many pixels you move filter by (default = 1).
+3. Padding: adding borders around image to control output size.
+   
+- Formula for Output Size (No Padding):
+  Output Height = (Input Height - Filter Height)/Stride + 1
+  Output Width  = (Input Width - Filter Width)/Stride + 1
+
+
