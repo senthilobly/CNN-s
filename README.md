@@ -85,4 +85,5 @@ CNNs preserve spatial structure by using:
 1. Filters (Kernels): small grids (e.g., 3x3) that scan the image.
 2. Convolution Operation: sliding filter over image and computing dot product.
 3. Feature Map: the result after convolution, showing detected features.
+4. Stride: Step size of filter movement (1 vs. 2 for downsampling)
 
