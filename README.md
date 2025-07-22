@@ -93,7 +93,7 @@ Convolution Process:
 2. Stride: how many pixels you move filter by (default = 1).
 3. Padding: adding borders around image to control output size.
    
-- Formula for Output Size (No Padding):
+**Formula for Output Size (No Padding):**
   Output Height = (Input Height - Filter Height)/Stride + 1
   Output Width  = (Input Width - Filter Width)/Stride + 1
 
