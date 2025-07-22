@@ -70,5 +70,14 @@ Color can introduce unnecessary complexity when:
 - For modern deep learning (CNNs can learn color features)
 - In artistic/visualization applications
 
+**2. Why Fully Connected Networks Fail for Images?**
+ - Images of 28x28 = 784 features → MLP has 784 input neurons.
 
+As image size increases (e.g., 100x100), input neurons = 10,000!
+
+Problems:
+
+High number of parameters → overfitting.
+
+Loss of spatial information → MLP treats pixels independently, ignoring structure.
 
