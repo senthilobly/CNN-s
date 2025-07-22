@@ -72,12 +72,18 @@ Color can introduce unnecessary complexity when:
 
 # **2. Why Fully Connected Networks Fail for Images?**
  - Images of 28x28 = 784 features → MLP has 784 input neurons.
-
 As image size increases (e.g., 100x100), input neurons = 10,000!
-
 Problems:
+1. High number of parameters → overfitting.
+2. Loss of spatial information → MLP treats pixels independently, ignoring structure.
 
-High number of parameters → overfitting.
+📌 3. CNN to the Rescue!
+📝 Core Concepts
+CNNs preserve spatial structure by using:
 
-Loss of spatial information → MLP treats pixels independently, ignoring structure.
+Filters (Kernels): small grids (e.g., 3x3) that scan the image.
+
+Convolution Operation: sliding filter over image and computing dot product.
+
+Feature Map: the result after convolution, showing detected features.
 
