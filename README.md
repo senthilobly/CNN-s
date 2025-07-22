@@ -78,13 +78,11 @@ Problems:
 1. High number of parameters → overfitting.
 2. Loss of spatial information → MLP treats pixels independently, ignoring structure.
 
-📌 3. CNN to the Rescue!
-📝 Core Concepts
+# 3. CNN to the Rescue!
+**Core Concepts**
 CNNs preserve spatial structure by using:
 
-Filters (Kernels): small grids (e.g., 3x3) that scan the image.
-
-Convolution Operation: sliding filter over image and computing dot product.
-
-Feature Map: the result after convolution, showing detected features.
+1. Filters (Kernels): small grids (e.g., 3x3) that scan the image.
+2. Convolution Operation: sliding filter over image and computing dot product.
+3. Feature Map: the result after convolution, showing detected features.
 
