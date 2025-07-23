@@ -145,6 +145,51 @@ Pixel values in RGB/HSV channels.
 - **Texture Kernels**: Use multiple scales to capture pattern variations.
 - **Color Kernels**: Apply per-channel for precise color manipulation.
 
+## Edges
+Edges represent boundaries between distinct regions in an image where significant changes in pixel intensity occur. They are fundamental visual features that:
 
+**Key Characteristics of Edges:**
+
+1. Localized changes in pixel values (intensity/color)
+2. Oriented features (vertical, horizontal, diagonal)
+3. Magnitude (strength of the transition)
+4. Polarity (dark-to-light or light-to-dark transition)
+
+Edge detection algorithms identify these intensity changes using mathematical operators. Here's the technical process:
+**1. Gradient Calculation (First-Order Derivatives)**
+The gradient measures how intensity changes at each pixel:
+Gradient (∇f) = [∂f/∂x, ∂f/∂y] 
+ - ∂f/∂x = horizontal change (x-direction)
+ - ∂f/∂y = vertical change (y-direction)
+
+Gradient magnitude shows edge strength:
+ |∇f| = √((∂f/∂x)² + (∂f/∂y)²)
+
+ Gradient direction shows edge orientation:
+ θ = arctan(∂f/∂y ÷ ∂f/∂x)
+
+**2. Common Edge Detection Kernels**
+ 1. Sobel Operator:
+ 2. Prewitt Operator:
+ 3. Laplacian:
+
+**Applications of Edge Detection**
+1. Object Recognition - Finding object boundaries
+2. Autonomous Vehicles - Lane detection
+3. Medical Imaging - Tumor boundary identification
+4. OCR - Character segmentation
+5. 3D Reconstruction - Depth estimation
+
+**Key Challenges**
+1. Noise Sensitivity - Random variations can create false edges
+2. Scale Dependence - Edge thickness varies with kernel size
+3. Threshold Selection - Balancing detail vs. noise
+4. Texture Edges - Distinguishing true boundaries from patterns
+
+
+ 
+
+
+Reference Link - https://medium.com/swlh/convolutional-neural-networks-22764af1c42a
 
 
