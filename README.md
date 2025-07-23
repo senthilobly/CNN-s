@@ -104,5 +104,28 @@ B. Reduce computation
 C. Extract dominant features
 D. Provide translation invariance (small shifts in image won’t affect results much)
 
+# Image Features and Convolution Kernels
+
+In image processing, kernels (filters) detect or modify specific visual features during convolution. Below is a breakdown of how they operate on key elements:
+
+A Convolution Layer is the building block of Convolutional Neural Networks. It applies multiple learnable filters over the input image to extract patterns such as:
+
+- Edges
+- Shapes
+- Textures
+- Colors (in colored images)
+
+Each filter produces a feature map, and multiple filters generate depth in the output.
+
+**1. Edges**
+Rapid intensity changes between adjacent pixels (e.g., object boundaries).
+**2. Shapes**
+Geometric structures formed by connected edges (e.g., squares, circles).
+**3. Textures**
+Repetitive patterns (e.g., fabric weave, tree bark).
+**4. Colors (Colored Images)**
+Pixel values in RGB/HSV channels.
+
+
 
 
