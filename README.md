@@ -213,6 +213,34 @@ This is called a dot product of the filter and local region of the input.
 
 Refer to CNN_Simple_28x28 program for simple CNN network on 28x28 image.
 
+## ⚙️ Key Hyperparameters
+
+| Hyperparameter | Description                     | Effect                          |
+|----------------|---------------------------------|---------------------------------|
+| **Stride**     | Steps the filter moves          | Larger → Smaller output         |
+| **Padding**    | Add zeros around image          | Preserves size if 'same'        |
+| **Kernel Size**| Filter size (e.g. 3×3)          | Larger → More global context    |
+| **Depth**      | Number of filters               | Adds layers in feature space    |
+
+## Convolution Output Shape Formula
+
+For an input with dimensions `(H, W)` and hyperparameters:
+Output Height = ((H + 2P - K) / S) + 1
+Output Width = ((W + 2P - K) / S) + 1
+
+
+Where:
+- `H` = Input height
+- `W` = Input width
+- `K` = Kernel size (assuming square kernel)
+- `P` = Padding size
+- `S` = Stride length
+- `⌊ ⌋` = Floor operation
+
+Example (3×3 kernel, stride 2, padding 1):
+Input: 32×32 → Output: ⌊(32 + 2×1 - 3)/2⌋ + 1 = 16×16
+
+
 
 
  
