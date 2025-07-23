@@ -97,4 +97,12 @@ Convolution Process:
   Output Height = (Input Height - Filter Height)/Stride + 1
   Output Width  = (Input Width - Filter Width)/Stride + 1
 
+**What is Max Pooling?:**
+Max Pooling is a downsampling operation used in Convolutional Neural Networks (CNNs) to:
+A. Reduce the size of feature maps
+B. Reduce computation
+C. Extract dominant features
+D. Provide translation invariance (small shifts in image won’t affect results much)
+
+
 
