@@ -199,6 +199,19 @@ B. Shapes - The completed figures formed by those outlines
 C. Textures - The "feel" of surfaces (rough/smooth patterns)
 D. Colors - The paint filling those shapes
 
+**Mathematical Definition for Convolution operation:**
+ - I = Input image (2D matrix)
+ - K = Kernel/filter (smaller 2D matrix)
+ - F(i,j) = Output feature map at position (i, j)
+ - 𝑘 = kernel height and width
+
+**F(i,j) = ∑ (from m=0 to kh-1) ∑ (from n=0 to kw-1) I(i+m,j+n) • K(m,n)**
+
+  - 𝑘h, kw = kernel height and width
+    
+This is called a dot product of the filter and local region of the input.
+
+
 
  
 
