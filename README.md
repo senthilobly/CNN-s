@@ -186,6 +186,19 @@ Gradient magnitude shows edge strength:
 3. Threshold Selection - Balancing detail vs. noise
 4. Texture Edges - Distinguishing true boundaries from patterns
 
+| Feature  | What?                          | How It's Detected?                  | Example                          | Common Detection Methods          |
+|----------|--------------------------------|-------------------------------------|----------------------------------|-----------------------------------|
+| **Edges** | Boundaries where pixel values change suddenly | Detecting rapid intensity changes | Outline of a building against sky | Sobel, Canny, Laplacian operators |
+| **Shapes** | Defined forms made by connected edges | Finding closed contours from edges | Square window, circular clock | Contour analysis, Hough Transform |
+| **Textures** | Surface patterns made by repeating small elements | Analyzing repeating local patterns | Brick wall, fabric weave | Gabor filters, Local Binary Patterns |
+| **Colors** | Visual perception of light wavelengths | Measuring RGB/HSV pixel values | Red apple, blue sky | Color histograms, Thresholding |
+
+**Key Explanations:**
+A. Edges - Like pencil outlines in a drawing
+B. Shapes - The completed figures formed by those outlines
+C. Textures - The "feel" of surfaces (rough/smooth patterns)
+D. Colors - The paint filling those shapes
+
 
  
 
