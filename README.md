@@ -235,7 +235,6 @@ Where:
 - `K` = Kernel size (assuming square kernel)
 - `P` = Padding size
 - `S` = Stride length
-- `⌊ ⌋` = Floor operation
 
 Example (3×3 kernel, stride 2, padding 1):
 Input: 32×32 → Output: ⌊(32 + 2×1 - 3)/2⌋ + 1 = 16×16
