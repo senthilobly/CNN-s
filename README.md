@@ -119,12 +119,31 @@ Each filter produces a feature map, and multiple filters generate depth in the o
 
 **1. Edges**
 Rapid intensity changes between adjacent pixels (e.g., object boundaries).
+
 **2. Shapes**
 Geometric structures formed by connected edges (e.g., squares, circles).
+
 **3. Textures**
 Repetitive patterns (e.g., fabric weave, tree bark).
+
 **4. Colors (Colored Images)**
 Pixel values in RGB/HSV channels.
+
+## Summary Table
+
+| Feature    | Kernel Type           | Primary Application          |
+|------------|-----------------------|-------------------------------|
+| Edges      | Sobel, Laplacian      | Object detection             |
+| Shapes     | Corner detectors      | Feature matching             |
+| Textures   | Gabor filters         | Material analysis            |
+| Colors     | Channel-specific kernels | White balancing, filtering |
+
+## Practical Notes
+
+- **Edge Kernels**: Preprocess images before segmentation.
+- **Shape Kernels**: Combine with edge detectors for robust feature extraction.
+- **Texture Kernels**: Use multiple scales to capture pattern variations.
+- **Color Kernels**: Apply per-channel for precise color manipulation.
 
 
 
