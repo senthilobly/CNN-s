@@ -211,6 +211,8 @@ D. Colors - The paint filling those shapes
     
 This is called a dot product of the filter and local region of the input.
 
+Refer to CNN_Simple_28x28 program for simple CNN network on 28x28 image.
+
 
 
  
