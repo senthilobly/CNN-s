@@ -16,10 +16,45 @@ It covers the core operations of a CNN:
   - **Vertical Edge Detection (Sobel Y)**: Detects vertical lines or edges.
   - **Horizontal Edge Detection (Sobel X)**: Detects horizontal lines or edges.
   - **Laplacian Edge Detection**: Captures all-direction edge intensity by computing second-order derivatives.
+    
+**1. Sobel Filters**
+  Sobel filters are first-order derivatives that detect edges in specific directions.
+  
+ **- Sobel Horizontal Filter**
+    kernel = [-1 -2 -1, 0 0 0 , 1 2 1]
+    Detects Horizontal edges, where pixel intensity changes vertically (from top to bottom).
+    
+    Example:
+    input = [10 10 10, 50 50 50, 100 100 100] * Sobel_h
+          = (-1×10 + -2×10 + -1×10) + (0×50 + 0×50 + 0×50) + (1×100 + 2×100 + 1×100)
+    output = (-10 -20 -10) + (0) + (100 + 200 + 100) = -40 + 400 = 360
+    High value → significant vertical change (strong horizontal edge).
 
-**3. Laplacian Filter:**
+  **- Sobel Vertical Filter**
+     kernel = [-1 0 1, -2 0 2 , -1 0 1]
+     Detects Vertical edges, where pixel intensity changes horizontally (from left to right).
+
+     Example:
+     input = [10  50 100, 10  50 100, 10  50 100]
+           = (-1×10 + 0×50 + 1×100) + (-2×10 + 0×50 + 2×100) + (-1×10 + 0×50 + 1×100)
+     output = (-10 + 0 + 100) + (-20 + 0 + 200) + (-10 + 0 + 100) = 90 + 180 + 90 = 360
+     High value → strong vertical edge.
+
+**2. Laplacian Filter:**
    The Laplacian filter is a second-order derivative filter used to detect edges in all directions (horizontal, vertical,       diagonal) by highlighting regions of rapid intensity change.
    Kernal Example = [0  -1   0  , -1  4  -1, 0  -1   0] & [ -1 -1 -1, -1  8 -1, -1 -1 -1]
+   
+   **How it Works?**
+   1. It looks at the difference between a pixel and its neighbors.
+   2. High differences (edges) result in high positive or negative values.
+
+    Example:
+    Input = [10 10 10, 10 100 10, 10 10 10] * Laplasian filter
+    Output = (4 × 100) + (−1×10)×4 = 400 − 40 = 360
+
+    It highlights the central pixel because it's sharply different from the surrounding values — indicating an edge or a         corner.
+   
+
 
 
 
