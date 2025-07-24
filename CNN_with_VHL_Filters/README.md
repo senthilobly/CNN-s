@@ -17,6 +17,12 @@ It covers the core operations of a CNN:
   - **Horizontal Edge Detection (Sobel X)**: Detects horizontal lines or edges.
   - **Laplacian Edge Detection**: Captures all-direction edge intensity by computing second-order derivatives.
 
+**3. Laplacian Filter:**
+   The Laplacian filter is a second-order derivative filter used to detect edges in all directions (horizontal, vertical,       diagonal) by highlighting regions of rapid intensity change.
+   Kernal Example = [0  -1   0  , -1  4  -1, 0  -1   0] & [ -1 -1 -1, -1  8 -1, -1 -1 -1]
+
+
+
 These filters are commonly used in image processing to detect edges and structure from images.
 
 ---
