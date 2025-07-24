@@ -1,28 +1,68 @@
 
-# 🧠 Simple Convolutional Neural Network (CNN) Using NumPy
+# Simple Convolutional Neural Network (CNN) Using NumPy
 
-This project demonstrates a basic **Convolutional Neural Network (CNN)** pipeline implemented from scratch using **NumPy**, without any deep learning libraries like TensorFlow or PyTorch.
+This program demonstrates a basic **Convolutional Neural Network (CNN)** pipeline implemented from scratch using **NumPy**, without any deep learning libraries like TensorFlow or PyTorch.
 
 It covers the core operations of a CNN:
 - Convolution using predefined kernels
 - Max Pooling for downsampling
 - Fully Connected Layer
 - Softmax Activation for classification
-
 ---
 
-## 📌 Features
+## Features
 
 - Convolution using 3 filters:
   - **Vertical Edge Detection (Sobel Y)**: Detects vertical lines or edges.
   - **Horizontal Edge Detection (Sobel X)**: Detects horizontal lines or edges.
   - **Laplacian Edge Detection**: Captures all-direction edge intensity by computing second-order derivatives.
+    
+**1. Sobel Filters**
+  Sobel filters are first-order derivatives that detect edges in specific directions.
+  
+ **- Sobel Horizontal Filter**
+    kernel = [-1 -2 -1, 0 0 0 , 1 2 1]
+    Detects Horizontal edges, where pixel intensity changes vertically (from top to bottom).
+    
+    Example:
+    input = [10 10 10, 50 50 50, 100 100 100] * Sobel_h
+          = (-1×10 + -2×10 + -1×10) + (0×50 + 0×50 + 0×50) + (1×100 + 2×100 + 1×100)
+    output = (-10 -20 -10) + (0) + (100 + 200 + 100) = -40 + 400 = 360
+    High value → significant vertical change (strong horizontal edge).
+
+  **- Sobel Vertical Filter**
+     kernel = [-1 0 1, -2 0 2 , -1 0 1]
+     Detects Vertical edges, where pixel intensity changes horizontally (from left to right).
+
+     Example:
+     input = [10  50 100, 10  50 100, 10  50 100]
+           = (-1×10 + 0×50 + 1×100) + (-2×10 + 0×50 + 2×100) + (-1×10 + 0×50 + 1×100)
+     output = (-10 + 0 + 100) + (-20 + 0 + 200) + (-10 + 0 + 100) = 90 + 180 + 90 = 360
+     High value → strong vertical edge.
+
+**2. Laplacian Filter:**
+   The Laplacian filter is a second-order derivative filter used to detect edges in all directions (horizontal, vertical,       diagonal) by highlighting regions of rapid intensity change.
+   Kernal Example = [0  -1   0  , -1  4  -1, 0  -1   0] & [ -1 -1 -1, -1  8 -1, -1 -1 -1]
+   
+   **How it Works?**
+   1. It looks at the difference between a pixel and its neighbors.
+   2. High differences (edges) result in high positive or negative values.
+
+    Example:
+    Input = [10 10 10, 10 100 10, 10 10 10] * Laplasian filter
+    Output = (4 × 100) + (−1×10)×4 = 400 − 40 = 360
+
+    It highlights the central pixel because it's sharply different from the surrounding values — indicating an edge or a         corner.
+   
+
+
+
 
 These filters are commonly used in image processing to detect edges and structure from images.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Input Image (28x28 grayscale)
@@ -46,16 +86,7 @@ Class Probabilities (10 classes)
 
 ---
 
-## 📂 Files
-
-| File         | Description |
-|--------------|-------------|
-| `cnn_numpy.py` | Main Python script implementing the CNN using NumPy |
-| `README.md`  | Project documentation and usage guide |
-
----
-
-## 📦 Dependencies
+## Dependencies
 
 - Python 3.x
 - NumPy
@@ -69,7 +100,7 @@ pip install numpy matplotlib
 
 ---
 
-## ▶️ How It Works
+## How It Works
 
 1. **Input**: A randomly generated grayscale image of size `28x28`
 2. **Convolution**: Applied 3 different kernels to extract features:
@@ -83,7 +114,7 @@ pip install numpy matplotlib
 
 ---
 
-## 📊 Output
+## Output
 
 - **Feature Maps**: Displays the filtered results after convolution for each kernel
 - **Max-Pooled Output**: Reduces spatial dimensions to improve efficiency
@@ -91,7 +122,7 @@ pip install numpy matplotlib
 
 ---
 
-## 🧪 Sample Output
+## Sample Output
 
 ```bash
 Input Image Shape: (28, 28)
@@ -115,7 +146,7 @@ Visual Output:
 
 ---
 
-## 📝 Notes
+## Notes
 
 - This is a minimal working example for **educational purposes**.
 - No backpropagation or training is included — weights and biases are random.
@@ -123,27 +154,13 @@ Visual Output:
   - Multiple layers
   - Training via gradient descent
   - Real image datasets (e.g., MNIST)
-
 ---
 
-## 📸 Screenshots
 
-*(Add image showing feature maps if available)*
-
----
-
-## 👨‍💻 Author
-
-**Senthilkumar Ravi**  
-Learning CNNs from scratch using NumPy
-
----
-
-## 📚 References
+## References
 
 - Sobel and Laplacian Edge Detection
 - Neural Network basics
 - Deep Learning by Goodfellow et al.
 - [D2L.ai](https://d2l.ai/) - Dive into Deep Learning
-
 ---
