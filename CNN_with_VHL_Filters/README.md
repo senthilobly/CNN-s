@@ -1,17 +1,16 @@
 
-# 🧠 Simple Convolutional Neural Network (CNN) Using NumPy
+# Simple Convolutional Neural Network (CNN) Using NumPy
 
-This project demonstrates a basic **Convolutional Neural Network (CNN)** pipeline implemented from scratch using **NumPy**, without any deep learning libraries like TensorFlow or PyTorch.
+This program demonstrates a basic **Convolutional Neural Network (CNN)** pipeline implemented from scratch using **NumPy**, without any deep learning libraries like TensorFlow or PyTorch.
 
 It covers the core operations of a CNN:
 - Convolution using predefined kernels
 - Max Pooling for downsampling
 - Fully Connected Layer
 - Softmax Activation for classification
-
 ---
 
-## 📌 Features
+## Features
 
 - Convolution using 3 filters:
   - **Vertical Edge Detection (Sobel Y)**: Detects vertical lines or edges.
@@ -22,7 +21,7 @@ These filters are commonly used in image processing to detect edges and structur
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Input Image (28x28 grayscale)
@@ -46,16 +45,7 @@ Class Probabilities (10 classes)
 
 ---
 
-## 📂 Files
-
-| File         | Description |
-|--------------|-------------|
-| `cnn_numpy.py` | Main Python script implementing the CNN using NumPy |
-| `README.md`  | Project documentation and usage guide |
-
----
-
-## 📦 Dependencies
+## Dependencies
 
 - Python 3.x
 - NumPy
@@ -69,7 +59,7 @@ pip install numpy matplotlib
 
 ---
 
-## ▶️ How It Works
+## How It Works
 
 1. **Input**: A randomly generated grayscale image of size `28x28`
 2. **Convolution**: Applied 3 different kernels to extract features:
@@ -83,7 +73,7 @@ pip install numpy matplotlib
 
 ---
 
-## 📊 Output
+## Output
 
 - **Feature Maps**: Displays the filtered results after convolution for each kernel
 - **Max-Pooled Output**: Reduces spatial dimensions to improve efficiency
@@ -91,7 +81,7 @@ pip install numpy matplotlib
 
 ---
 
-## 🧪 Sample Output
+## Sample Output
 
 ```bash
 Input Image Shape: (28, 28)
@@ -115,7 +105,7 @@ Visual Output:
 
 ---
 
-## 📝 Notes
+## Notes
 
 - This is a minimal working example for **educational purposes**.
 - No backpropagation or training is included — weights and biases are random.
@@ -123,27 +113,13 @@ Visual Output:
   - Multiple layers
   - Training via gradient descent
   - Real image datasets (e.g., MNIST)
-
 ---
 
-## 📸 Screenshots
 
-*(Add image showing feature maps if available)*
-
----
-
-## 👨‍💻 Author
-
-**Senthilkumar Ravi**  
-Learning CNNs from scratch using NumPy
-
----
-
-## 📚 References
+## References
 
 - Sobel and Laplacian Edge Detection
 - Neural Network basics
 - Deep Learning by Goodfellow et al.
 - [D2L.ai](https://d2l.ai/) - Dive into Deep Learning
-
 ---
